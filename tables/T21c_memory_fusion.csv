@@ -1,0 +1,4 @@
+target,alpha_star,fused_RMSE,persistence_RMSE,pure_analog_RMSE
+fire_proxy,0.3,14.8804,16.0805,21.1176
+cloud_height_proxy,0.3,7.4674,8.1411,10.3646
+PII,0.3,0.3295,0.3509,0.4854

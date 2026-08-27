@@ -1,0 +1,7 @@
+aspect,specification
+profile features,"early-window means {cape,blh,wind250,rh_colmean,ventilation,t2m} + statics {lat,elev,slope,cvh}"
+retrieval,"top-k=3, exp(−d/τ) weights"
+fusion,α* (0.3 learned) blend with persistence
+consolidation salience,s=λ1·surprise+λ2·severity+λ3·novelty
+anti-forgetting,EWC quadratic penalty on kernel params
+provenance,row-level links into master.csv

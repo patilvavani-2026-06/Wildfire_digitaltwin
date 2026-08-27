@@ -1,0 +1,8 @@
+relation,domain→range,semantics
+OBSERVED_BY,Observation→PyroCbEvent,temporal indexing
+SUPPLIES,Reanalysis→Driver,gridded forcing
+VENTILATES / ENERGIZES / DRYS,Driver→Mechanism,signed by coupling matrix
+AMPLIFIES / SUPPRESSES,Mechanism→Outcome,direction from learned edges
+DO,Counterfactual→Driver,interventional semantics (Pearl)
+JUSTIFIED_BY,Action→Counterfactual/Outcome,explainable recommendation
+ANALOG_OF,PyroCbEvent↔PyroCbEvent,memory similarity edges (d<τ)

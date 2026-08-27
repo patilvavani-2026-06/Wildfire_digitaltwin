@@ -1,0 +1,10 @@
+scenario,operator,description
+S0 baseline,S0 baseline,S0 baseline
+S1 wind +20%,S1 wind +20%,S1 wind +20%
+S2 heatwave +5K,S2 heatwave +5K,S2 heatwave +5K
+S3 drying RH -30%,S3 drying RH -30%,S3 drying RH -30%
+S4 rain-out,S4 rain-out,S4 rain-out
+S5 deep drought,S5 deep drought,S5 deep drought
+S6 relocate: high-relief,S6 relocate: high-relief,S6 relocate: high-relief
+S7 compound extreme,S7 compound extreme,S7 compound extreme
+S8 pyro-feedback ON,S8 pyro-feedback ON,S8 pyro-feedback ON

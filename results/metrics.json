@@ -1,0 +1,350 @@
+{
+ "core": {
+  "fire_proxy (+6h)": {
+   "persistence": {
+    "RMSE": 16.6105022456419,
+    "MAE": 9.10803700115618,
+    "R2": 0.10088806218680757
+   },
+   "ridge": {
+    "RMSE": 34.1444794909624,
+    "MAE": 20.55554785383716,
+    "R2": -2.7991743866081
+   },
+   "xgb": {
+    "RMSE": 17.08893893367062,
+    "MAE": 12.036553594619322,
+    "R2": 0.04834741596853376
+   },
+   "quantiles": {
+    "PICP_80": 0.65,
+    "sharpness": 22.408,
+    "pin10_proxy": 6.494
+   },
+   "quantiles_conformal": {
+    "PICP_80_raw": 0.65,
+    "PICP_80_conformal": 0.776,
+    "k_lo": 10.597,
+    "k_hi": 17.474
+   }
+  },
+  "cloud-height proxy (+6h)": {
+   "persistence": {
+    "RMSE": 8.152203842229056,
+    "MAE": 5.006547677407746,
+    "R2": -0.0632197969967132
+   },
+   "ridge": {
+    "RMSE": 12.345746699442865,
+    "MAE": 8.296776054074652,
+    "R2": -1.438415543036562
+   },
+   "xgb": {
+    "RMSE": 8.70499772815237,
+    "MAE": 5.632846927515477,
+    "R2": -0.21230059351020913
+   }
+  },
+  "cloud-top BT change (+6h)": {
+   "persistence": {
+    "RMSE": 0.3580411311614334,
+    "MAE": 0.23964824580188676,
+    "R2": -0.0002499367232615679
+   },
+   "ridge": {
+    "RMSE": 0.6246879766585197,
+    "MAE": 0.3769280708533288,
+    "R2": -2.0448716168722894
+   },
+   "xgb": {
+    "RMSE": 0.2917616991099401,
+    "MAE": 0.1760195178537951,
+    "R2": 0.3357994200295805
+   }
+  },
+  "PII (+6h)": {
+   "persistence": {
+    "RMSE": 0.3605610356266672,
+    "MAE": 0.2342215402796742,
+    "R2": 0.27089033984779765
+   },
+   "ridge": {
+    "RMSE": 0.6817070256688655,
+    "MAE": 0.4325580547318611,
+    "R2": -1.6063384266843665
+   },
+   "xgb": {
+    "RMSE": 0.3796399368128101,
+    "MAE": 0.27332814553620355,
+    "R2": 0.1916879515941764
+   }
+  },
+  "lifecycle intensification (+6h)": {
+   "xgb": {
+    "AUC": 0.713,
+    "F1": 0.604
+   },
+   "majority": {
+    "AUC": 0.5,
+    "F1": 0.0
+   }
+  },
+  "\u0394fire proxy (+6h)": {
+   "twin": {
+    "RMSE": 15.3449,
+    "R2": 0.153
+   },
+   "no-change baseline": {
+    "RMSE": 16.6795,
+    "R2": 0.0
+   },
+   "skill improvement %": 8.0
+  },
+  "\u0394PII (+6h)": {
+   "twin": {
+    "RMSE": 0.3494,
+    "R2": 0.067
+   },
+   "no-change baseline": {
+    "RMSE": 0.3618,
+    "R2": 0.0
+   },
+   "skill improvement %": 3.4
+  },
+  "within_event_summary": [
+   {
+    "target": "y_cbt_chg_p1",
+    "within-event R2 twin (median)": 0.667,
+    "within-event R2 persistence (median)": -0.001
+   },
+   {
+    "target": "y_chp_p1",
+    "within-event R2 twin (median)": -0.891,
+    "within-event R2 persistence (median)": -0.765
+   },
+   {
+    "target": "y_fire_proxy_p1",
+    "within-event R2 twin (median)": -0.97,
+    "within-event R2 persistence (median)": -0.623
+   },
+   {
+    "target": "y_pii_p1",
+    "within-event R2 twin (median)": -0.668,
+    "within-event R2 persistence (median)": -0.461
+   }
+  ]
+ },
+ "memory_engine": {
+  "retrieval_table": "T21",
+  "fusion": [
+   {
+    "target": "fire_proxy",
+    "alpha_star": 0.3,
+    "fused_RMSE": 14.8804,
+    "persistence_RMSE": 16.0805,
+    "pure_analog_RMSE": 21.1176
+   },
+   {
+    "target": "cloud_height_proxy",
+    "alpha_star": 0.3,
+    "fused_RMSE": 7.4674,
+    "persistence_RMSE": 8.1411,
+    "pure_analog_RMSE": 10.3646
+   },
+   {
+    "target": "PII",
+    "alpha_star": 0.3,
+    "fused_RMSE": 0.3295,
+    "persistence_RMSE": 0.3509,
+    "pure_analog_RMSE": 0.4854
+   }
+  ],
+  "finding": "Alaska pair 258/260 are mutual nearest analogs; \u03b1*=0.3 fusion beats persistence on all targets"
+ },
+ "coupling_core": {
+  "mean_rollout_R2": -0.014,
+  "note": "free-running linear kernel partially unstable -> mandates assimilation (see enkf)"
+ },
+ "enkf_sync": {
+  "per_event": [
+   {
+    "held_out_event": 179,
+    "free_run_RMSE": 1.001,
+    "analysis_RMSE": 0.75,
+    "reduction_pct": 25.1,
+    "mean_spread": 0.35,
+    "mean_divergence_pressure": 2.76
+   },
+   {
+    "held_out_event": 180,
+    "free_run_RMSE": 0.814,
+    "analysis_RMSE": 0.532,
+    "reduction_pct": 34.6,
+    "mean_spread": 0.367,
+    "mean_divergence_pressure": 2.0
+   },
+   {
+    "held_out_event": 181,
+    "free_run_RMSE": 1.102,
+    "analysis_RMSE": 0.425,
+    "reduction_pct": 61.5,
+    "mean_spread": 0.299,
+    "mean_divergence_pressure": 7.18
+   },
+   {
+    "held_out_event": 189,
+    "free_run_RMSE": 0.693,
+    "analysis_RMSE": 0.432,
+    "reduction_pct": 37.6,
+    "mean_spread": 0.343,
+    "mean_divergence_pressure": 1.49
+   },
+   {
+    "held_out_event": 190,
+    "free_run_RMSE": 0.825,
+    "analysis_RMSE": 0.811,
+    "reduction_pct": 1.7,
+    "mean_spread": 0.332,
+    "mean_divergence_pressure": 6.63
+   },
+   {
+    "held_out_event": 202,
+    "free_run_RMSE": 1.921,
+    "analysis_RMSE": 0.903,
+    "reduction_pct": 53.0,
+    "mean_spread": 0.348,
+    "mean_divergence_pressure": 40.41
+   },
+   {
+    "held_out_event": 216,
+    "free_run_RMSE": 0.664,
+    "analysis_RMSE": 0.281,
+    "reduction_pct": 57.7,
+    "mean_spread": 0.357,
+    "mean_divergence_pressure": 2.79
+   },
+   {
+    "held_out_event": 253,
+    "free_run_RMSE": 2.071,
+    "analysis_RMSE": 0.842,
+    "reduction_pct": 59.3,
+    "mean_spread": 0.354,
+    "mean_divergence_pressure": 48.67
+   },
+   {
+    "held_out_event": 258,
+    "free_run_RMSE": 0.847,
+    "analysis_RMSE": 0.282,
+    "reduction_pct": 66.7,
+    "mean_spread": 0.361,
+    "mean_divergence_pressure": 4.72
+   },
+   {
+    "held_out_event": 260,
+    "free_run_RMSE": 0.783,
+    "analysis_RMSE": 0.371,
+    "reduction_pct": 52.6,
+    "mean_spread": 0.331,
+    "mean_divergence_pressure": 3.14
+   }
+  ],
+  "mean_RMSE_reduction_pct": 45.0,
+  "mean_divergence_pressure": 11.98
+ },
+ "counterfactual_engine": {
+  "n_futures": 46224,
+  "scenarios": [
+   {
+    "scenario": "S1 wind +20%",
+    "dFireProxy_24h": 0.14,
+    "dPII_24h": 0.0169,
+    "P_fire_intense_S0": 0.0,
+    "P_fire_intense_SC": 0.0,
+    "P_PyroCb_S0": 0.019,
+    "P_PyroCb_SC": 0.022
+   },
+   {
+    "scenario": "S2 heatwave +5K",
+    "dFireProxy_24h": -0.52,
+    "dPII_24h": -0.0245,
+    "P_fire_intense_S0": 0.0,
+    "P_fire_intense_SC": 0.0,
+    "P_PyroCb_S0": 0.019,
+    "P_PyroCb_SC": 0.008
+   },
+   {
+    "scenario": "S3 drying RH -30%",
+    "dFireProxy_24h": -0.49,
+    "dPII_24h": -0.0251,
+    "P_fire_intense_S0": 0.0,
+    "P_fire_intense_SC": 0.0,
+    "P_PyroCb_S0": 0.019,
+    "P_PyroCb_SC": 0.008
+   },
+   {
+    "scenario": "S4 rain-out",
+    "dFireProxy_24h": 0.1,
+    "dPII_24h": 0.0048,
+    "P_fire_intense_S0": 0.0,
+    "P_fire_intense_SC": 0.0,
+    "P_PyroCb_S0": 0.019,
+    "P_PyroCb_SC": 0.017
+   },
+   {
+    "scenario": "S5 deep drought",
+    "dFireProxy_24h": -0.35,
+    "dPII_24h": -0.0132,
+    "P_fire_intense_S0": 0.0,
+    "P_fire_intense_SC": 0.0,
+    "P_PyroCb_S0": 0.019,
+    "P_PyroCb_SC": 0.014
+   },
+   {
+    "scenario": "S6 relocate: high-relief",
+    "dFireProxy_24h": -2.91,
+    "dPII_24h": -0.0639,
+    "P_fire_intense_S0": 0.0,
+    "P_fire_intense_SC": 0.037,
+    "P_PyroCb_S0": 0.019,
+    "P_PyroCb_SC": 0.008
+   },
+   {
+    "scenario": "S7 compound extreme",
+    "dFireProxy_24h": -1.09,
+    "dPII_24h": -0.0413,
+    "P_fire_intense_S0": 0.0,
+    "P_fire_intense_SC": 0.0,
+    "P_PyroCb_S0": 0.019,
+    "P_PyroCb_SC": 0.004
+   },
+   {
+    "scenario": "S8 pyro-feedback ON",
+    "dFireProxy_24h": 0.01,
+    "dPII_24h": 0.0005,
+    "P_fire_intense_S0": 0.0,
+    "P_fire_intense_SC": 0.0,
+    "P_PyroCb_S0": 0.019,
+    "P_PyroCb_SC": 0.019
+   }
+  ],
+  "headline": "wind +20% raises 24-h PyroCb probability; high-relief relocation lowers PII most (-0.064)"
+ },
+ "cohort": {
+  "n_events": 10,
+  "n_rows": 227,
+  "cadence_h": 6,
+  "span": "2021-05-27..2022-06-14",
+  "events": [
+   179,
+   180,
+   181,
+   189,
+   190,
+   202,
+   216,
+   253,
+   258,
+   260
+  ]
+ }
+}

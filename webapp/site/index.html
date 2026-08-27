@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="lib/three.min.js"></script>
+<script src="lib/OrbitControls.js"></script>
+<title>PyroCast–MORPHEUS · Living Wildfire Digital Twin</title>
+<link rel="stylesheet" href="styles.css">
+<script src="lib/plotly.min.js"></script>
+<script src="data/pack.js"></script>
+</head><body>
+<header>
+  <div class="logo">PyroCast–<span>MORPHEUS</span></div>
+  <div class="sub">Living Digital Twin of the Wildfire–Atmosphere Continuum · 6-hour heartbeat · GOES ABI ⊗ ERA5 ⊗ terrain ⊗ memory</div>
+  <select id="eventSel"></select>
+  <select id="varSel">
+    <option value="fire_proxy">fire proxy (B07−B14)</option>
+    <option value="raw_cloud_bt">cloud-top BT</option>
+    <option value="cloud_height_proxy">cloud-height proxy</option>
+    <option value="PII">PyroCb Injection Index</option>
+  </select>
+  <button id="viewBtn">⛰ local 4D</button>
+  <button id="ghostBtn">👻 ghost off</button>
+  <div class="mode" id="modePill">…connecting</div>
+</header>
+
+<div class="kpis">
+  <div class="kpi teal"><b>−45.0%</b><span>EnKF sync vs free-run<br>(LOEO mean)</span></div>
+  <div class="kpi fire"><b>46,224</b><span>counterfactual futures<br>scored</span></div>
+  <div class="kpi blue"><b>0.713</b><span>AUROC lifecycle<br>intensification</span></div>
+  <div class="kpi ok"><b>0.776</b><span>80%-band coverage after<br>conformal self-audit</span></div>
+  <div class="kpi violet"><b>α*=0.30</b><span>memory fusion weight<br>(beats persistence 3/3)</span></div>
+  <div class="kpi amber"><b>10</b><span>PyroCb events · 227 states<br>2021–2022 · 6-h cadence</span></div>
+</div>
+
+<div class="panel" style="margin:12px 16px 0">
+  <h3>Mission-control wall — all tracked events (click to focus · dot: divergence health)</h3>
+  <div id="monitorWall" class="wall"></div>
+</div>
+
+<div class="layout">
+  <div>
+    <div class="panel">
+      <h3>4D Twin View — globe ⊗ local terrain ⊗ fire ⊗ plume ⊗ PyroCb ⊗ wind ⊗ ghost futures (drag to orbit)</h3>
+      <div id="globe-wrap">
+        <canvas id="globe"></canvas>
+        <div class="hud tl" id="hudTL">—</div>
+        <div class="hud tr" id="hudTR">—</div>
+        <div class="hud bl" id="hudBL">—</div>
+        <div class="timeline">
+          <button id="playBtn" title="LIVE OPS replay">▶ LIVE</button>
+          <select id="speedSel" class="small" title="playback speed">
+            <option value="2200">0.5×</option>
+            <option value="1100" selected>1×</option>
+            <option value="550">2×</option>
+            <option value="280">4×</option>
+          </select>
+          <input type="range" id="stepSlider" min="0" max="23" value="0">
+          <span class="small" id="stepLbl">step 0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Live ops feed — twin heartbeat stream ×N (trained replay · GOES hot-swap ready)</h3>
+      <div id="liveLog" class="livelog"></div>
+    </div>
+
+    <div class="panel"><h3>Trajectory ⊗ trained-model nowcast (median + 80% band)</h3><div id="trajChart" style="height:300px"></div></div>
+    <div class="panel"><h3>Synchronization heartbeat — truth vs free-run vs analysis · divergence pressure D(t)</h3><div id="enkfChart" style="height:300px"></div></div>
+    <div class="panel"><h3>Atmospheric drivers — BLH ⊗ CAPE ⊗ column RH</h3><div id="envChart" style="height:270px"></div></div>
+    <div class="panel"><h3>Learned fire–atmosphere coupling matrix (KG edge evidence)</h3><div id="couplingChart" style="height:330px"></div></div>
+  </div>
+
+  <div>
+    <div class="panel">
+      <h3>Twin console — live state snapshot</h3>
+      <div id="console"></div>
+    </div>
+    <div class="panel"><h3>Vital signs V₁–V₄ (patient monitor)</h3><div id="vitalsChart" style="height:250px"></div></div>
+    <div class="panel"><h3>Twin state x(t) — six blocks at playhead</h3><div id="stateTable"></div></div>
+    <div class="panel"><h3>Episodic memory — analog donors</h3><div id="memoryCard"></div></div>
+    <div class="panel">
+      <h3>Counterfactual dreaming — what-if operator</h3>
+      <div style="display:flex;gap:8px;margin-bottom:8px">
+        <select id="scenSel" style="flex:1"></select>
+        <button id="runWhatIf">dream</button>
+      </div>
+      <div id="whatifOut" class="small">Select an operator and press <b>dream</b>. In LIVE mode the trained models re-run now; in static mode pre-computed futures are shown.</div>
+      <div id="futuresChart" style="height:260px"></div>
+    </div>
+    <div class="panel"><h3>Decision intelligence — risk card</h3><div id="decisionCard"></div></div>
+    <div class="panel"><h3>Headline evidence (machine-verified)</h3><div id="evidenceTable"></div></div>
+  </div>
+</div>
+
+<div class="footnote">
+PyroCast–MORPHEUS research web-twin · real-time mode replays the trained twin at accelerated cadence over the 6-hourly cohort —
+the identical engine binds to a live GOES ABI stream for operations · backend: FastAPI + joblib XGB kernels (LIVE mode) ·
+all numbers traceable to results/metrics.json · local 4D terrain is parameterized by each event's measured elevation/slope/ruggedness.
+</div>
+<script src="app.js"></script>
+</body></html>

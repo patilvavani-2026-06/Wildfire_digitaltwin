@@ -1,0 +1,117 @@
+{
+ "retrieval": [
+  {
+   "query_event": 179,
+   "donor1": 181,
+   "d1": 5.052,
+   "donor2": 189,
+   "d2": 5.691,
+   "donor3": 180,
+   "d3": 5.703
+  },
+  {
+   "query_event": 180,
+   "donor1": 189,
+   "d1": 2.544,
+   "donor2": 202,
+   "d2": 4.043,
+   "donor3": 181,
+   "d3": 4.27
+  },
+  {
+   "query_event": 181,
+   "donor1": 180,
+   "d1": 3.291,
+   "donor2": 189,
+   "d2": 3.66,
+   "donor3": 202,
+   "d3": 4.871
+  },
+  {
+   "query_event": 189,
+   "donor1": 180,
+   "d1": 2.242,
+   "donor2": 202,
+   "d2": 2.439,
+   "donor3": 181,
+   "d3": 3.394
+  },
+  {
+   "query_event": 190,
+   "donor1": 202,
+   "d1": 3.32,
+   "donor2": 216,
+   "d2": 3.406,
+   "donor3": 260,
+   "d3": 4.185
+  },
+  {
+   "query_event": 202,
+   "donor1": 260,
+   "d1": 1.625,
+   "donor2": 258,
+   "d2": 1.752,
+   "donor3": 216,
+   "d3": 2.203
+  },
+  {
+   "query_event": 216,
+   "donor1": 190,
+   "d1": 2.505,
+   "donor2": 260,
+   "d2": 2.626,
+   "donor3": 202,
+   "d3": 2.705
+  },
+  {
+   "query_event": 253,
+   "donor1": 189,
+   "d1": 3.507,
+   "donor2": 180,
+   "d2": 4.055,
+   "donor3": 202,
+   "d3": 4.064
+  },
+  {
+   "query_event": 258,
+   "donor1": 260,
+   "d1": 2.396,
+   "donor2": 202,
+   "d2": 3.188,
+   "donor3": 189,
+   "d3": 4.136
+  },
+  {
+   "query_event": 260,
+   "donor1": 258,
+   "d1": 1.563,
+   "donor2": 202,
+   "d2": 1.688,
+   "donor3": 216,
+   "d3": 2.759
+  }
+ ],
+ "fusion": [
+  {
+   "target": "fire_proxy",
+   "alpha_star": 0.3,
+   "fused_RMSE": 14.8804,
+   "persistence_RMSE": 16.0805,
+   "pure_analog_RMSE": 21.1176
+  },
+  {
+   "target": "cloud_height_proxy",
+   "alpha_star": 0.3,
+   "fused_RMSE": 7.4674,
+   "persistence_RMSE": 8.1411,
+   "pure_analog_RMSE": 10.3646
+  },
+  {
+   "target": "PII",
+   "alpha_star": 0.3,
+   "fused_RMSE": 0.3295,
+   "persistence_RMSE": 0.3509,
+   "pure_analog_RMSE": 0.4854
+  }
+ ]
+}

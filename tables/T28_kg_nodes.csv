@@ -1,0 +1,11 @@
+node type,description
+PyroCbEvent,"tracked event (id, window, severity)"
+FireRegime,clusters from F20 archetypes
+Driver,"physical covariate block (BLH, CAPE, RH...)"
+Mechanism,named causal pathway
+Outcome,injection / decay / spread
+Observation,GOES feature bundle at t
+Reanalysis,ERA5 bundle at t
+Counterfactual,do-operator instance ω
+Action,tasking / alert decision
+Model,kernel with version + registry URI

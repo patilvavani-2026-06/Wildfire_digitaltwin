@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Build & deploy artifacts (regenerable)
+webapp/pyrocast_netlify.zip
+
+# Superseded bundles (see PyroCast_ALL_IMAGES_PNG.zip for the current 67-PNG set)
+PyroCast_figures_all.zip
+
+# Local headless-test screenshots (reproduce via webapp/verify_site.py)
+webapp/verify_*.png

@@ -1,0 +1,5 @@
+trigger,risk band,recommended posture
+P(PyroCb) ≥ 0.50,CRITICAL,immediate escalation; task mesoscale sector; aviation SIGMET prep
+0.25–0.50,HIGH,pre-position crews; restrict Rx-burn windows
+0.10–0.25,ELEVATED,increase observation cadence; brief IMT
+< 0.10,ROUTINE,nominal 6-h cycle

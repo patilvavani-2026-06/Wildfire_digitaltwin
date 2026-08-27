@@ -1,0 +1,135 @@
+{
+ "fire_proxy (+6h)": {
+  "persistence": {
+   "RMSE": 16.6105022456419,
+   "MAE": 9.10803700115618,
+   "R2": 0.10088806218680757
+  },
+  "ridge": {
+   "RMSE": 34.1444794909624,
+   "MAE": 20.55554785383716,
+   "R2": -2.7991743866081
+  },
+  "xgb": {
+   "RMSE": 17.08893893367062,
+   "MAE": 12.036553594619322,
+   "R2": 0.04834741596853376
+  },
+  "quantiles": {
+   "PICP_80": 0.65,
+   "sharpness": 22.408,
+   "pin10_proxy": 6.494
+  },
+  "quantiles_conformal": {
+   "PICP_80_raw": 0.65,
+   "PICP_80_conformal": 0.776,
+   "k_lo": 10.597,
+   "k_hi": 17.474
+  }
+ },
+ "cloud-height proxy (+6h)": {
+  "persistence": {
+   "RMSE": 8.152203842229056,
+   "MAE": 5.006547677407746,
+   "R2": -0.0632197969967132
+  },
+  "ridge": {
+   "RMSE": 12.345746699442865,
+   "MAE": 8.296776054074652,
+   "R2": -1.438415543036562
+  },
+  "xgb": {
+   "RMSE": 8.70499772815237,
+   "MAE": 5.632846927515477,
+   "R2": -0.21230059351020913
+  }
+ },
+ "cloud-top BT change (+6h)": {
+  "persistence": {
+   "RMSE": 0.3580411311614334,
+   "MAE": 0.23964824580188676,
+   "R2": -0.0002499367232615679
+  },
+  "ridge": {
+   "RMSE": 0.6246879766585197,
+   "MAE": 0.3769280708533288,
+   "R2": -2.0448716168722894
+  },
+  "xgb": {
+   "RMSE": 0.2917616991099401,
+   "MAE": 0.1760195178537951,
+   "R2": 0.3357994200295805
+  }
+ },
+ "PII (+6h)": {
+  "persistence": {
+   "RMSE": 0.3605610356266672,
+   "MAE": 0.2342215402796742,
+   "R2": 0.27089033984779765
+  },
+  "ridge": {
+   "RMSE": 0.6817070256688655,
+   "MAE": 0.4325580547318611,
+   "R2": -1.6063384266843665
+  },
+  "xgb": {
+   "RMSE": 0.3796399368128101,
+   "MAE": 0.27332814553620355,
+   "R2": 0.1916879515941764
+  }
+ },
+ "lifecycle intensification (+6h)": {
+  "xgb": {
+   "AUC": 0.713,
+   "F1": 0.604
+  },
+  "majority": {
+   "AUC": 0.5,
+   "F1": 0.0
+  }
+ },
+ "\u0394fire proxy (+6h)": {
+  "twin": {
+   "RMSE": 15.3449,
+   "R2": 0.153
+  },
+  "no-change baseline": {
+   "RMSE": 16.6795,
+   "R2": 0.0
+  },
+  "skill improvement %": 8.0
+ },
+ "\u0394PII (+6h)": {
+  "twin": {
+   "RMSE": 0.3494,
+   "R2": 0.067
+  },
+  "no-change baseline": {
+   "RMSE": 0.3618,
+   "R2": 0.0
+  },
+  "skill improvement %": 3.4
+ },
+ "within_event_summary": [
+  {
+   "target": "y_cbt_chg_p1",
+   "within-event R2 twin (median)": 0.667,
+   "within-event R2 persistence (median)": -0.001
+  },
+  {
+   "target": "y_chp_p1",
+   "within-event R2 twin (median)": -0.891,
+   "within-event R2 persistence (median)": -0.765
+  },
+  {
+   "target": "y_fire_proxy_p1",
+   "within-event R2 twin (median)": -0.97,
+   "within-event R2 persistence (median)": -0.623
+  },
+  {
+   "target": "y_pii_p1",
+   "within-event R2 twin (median)": -0.668,
+   "within-event R2 persistence (median)": -0.461
+  }
+ ]
+}

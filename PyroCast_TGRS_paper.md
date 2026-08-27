@@ -1,0 +1,32 @@
+# PyroCast–MORPHEUS: A Mnemotic Counterfactual Digital Twin for PyroCb Lifecycle Intelligence — with a Trained Reference Implementation
+
+*Condensed IEEE-TGRS-format paper derived from the full framework thesis (`PyroCast_MORPHEUS_Thesis.md`). Target: IEEE Transactions on Geoscience and Remote Sensing.*
+
+**Abstract**—Wildfire decision support is dominated by predictors that start each cycle tabula rasa. We define and instantiate a new digital-twin class — the Mnemotic Counterfactual Twin (MCT) — whose state explicitly carries episodic memory and calibrated uncertainty, which is kept bound to Earth by a 6-hour ensemble-Kalman heartbeat, which recalls past events to regularize regime-shifted forecasts, and which enumerates interventional futures for risk-averse decision making. On a ten-event six-hourly GOES/ERA5 PyroCb cohort (2021–2022, North America), the trained reference twin demonstrates: 45.0% mean state-error reduction via synchronization; analog memory fusion beating persistence on all tracked targets; AUROC 0.71 lifecycle-intensification triage; conformal self-repair of probabilistic coverage (0.65→0.776); and 46,224 scored counterfactual futures revealing ventilation-amplified injection odds and a terrain intensity–injection trade. A negative result — failure of parameter-only learners at out-of-regime *level* prediction — becomes the design's central theorem: for wildfire, synchronization and memory are not accessories; they are what make a model a twin.
+
+**Index Terms**—Digital twin, wildfire, pyrocumulonimbus, GOES ABI, ERA5, ensemble Kalman filter, analog forecasting, counterfactual inference, uncertainty quantification, remote sensing.
+
+## I. INTRODUCTION
+PyroCb events invert the Earth-observation problem: the observed object (fire) modifies its observation medium (atmosphere) fast enough that the two must be co-estimated. Operations need *living* state estimates, recall of similar historical events, interventional what-if analysis, and honest uncertainty. Existing systems deliver at most one of these. MORPHEUS (**M**nemotic **O**bservationally-coupled **R**ecursive **PH**ysics-informed **E**pisodic **U**ncertainty-calibrated **S**elf-learning twin) delivers all four as architectural primitives (axioms A1–A6; §2 of thesis). Contributions: (1) MCT class + state ontology with memory/uncertainty as state; (2) divergence pressure D(t) and trust field Θ(t) governance variables; (3) memory engine with measured retrieval/fusion skill under LOEO; (4) do-operator futures engine with 46,224 scored futures; (5) fully reproducible sandbox-scale implementation.
+
+## II. DATA
+Seven harmonized files reduce to a single 227×45 master table: 10 PyroCb events × ~23 six-hourly snapshots of GOES ABI proxies (fire t07−t14, cloud-height t14−t16, cloud-top BT, pseudo-green), ERA5 single levels (t2m, sp, winds, BLH, CAPE, CIN, tp, SLHF, SSHF, fg10), pressure-level RH(850/750/650) and 250-hPa winds, terrain (elevation/slope/aspect/TPI/TRI) and vegetation (cvh/cvl/tvh/tvl). Events span New Mexico (Johnson, confirmed), Arizona, Utah, California (Lava-consistent), the British-Columbia heat dome, Manitoba, Yukon, south Florida, and two interior-Alaska siblings. We audit units/sign conventions (ECMWF flux sign; mixed GOES scaling) and build an 82-column twin-state table with physics-derived variables (ventilation, shear, buoyancy forcing, RH structure, upslope index, dry-spell fuel proxy, rates, lifecycle phase).
+
+## III. METHOD
+State x=[xᶠ xᵖ xᵃ xˡ xᵐ xᵘ]ᵀ (n=52); observation y=Hx+v (GOES r=0.15σ, ERA5 r=0.08σ); propagator x⁺=Ax+Bu+G_θ(x,m)+w with ridge kernel A spectral-clipped ρ≤0.97, GBM residual G_θ; stochastic EnKF analysis each 6 h (N=80) with divergence pressure D=rᵀS⁻¹r and trust Θ=σ(c₁−c₂D/m−c₃(1−cov)); memory: episodic schemas with early-window keys, softmax retrieval (τ=median distance), prediction fusion ŷ=α·ŷ_mem+(1−α)·ŷ_dyn (α\*=0.3, nested LOEO); physics-residual-learner-memory arbiter across horizons {6..24 h}; quantile heads + split-conformal repair; counterfactuals via do-operators with derived-variable recomputation; decisions by CVaR₀.₉ minimization over the future measure π(ω). Validation: leave-one-event-out (LOEO) throughout; nested LOEO for meta-parameters; persistence/no-change/ridge/majority baselines; pooled and per-event reporting.
+
+## IV. RESULTS
+**(a) Synchronization:** EnKF analysis vs free-run state RMSE reduction 1.7–66.7% per event, **mean 45.0%**; stationary spread ≈0.35σ; D(t) flares (40–49) exactly on the two regime-extreme events.
+**(b) Nowcast:** cloud-top BT change R²=0.336 pooled, 0.667 within-event median; Δ-fire-proxy −8.0% vs no-change; Δ-PII −3.4%; intensification AUROC 0.713/F1 0.604. Level prediction transfers poorly (R²≤0.10): the regime-transfer theorem stated formally.
+**(c) Memory:** Alaska 258↔260 mutual nearest analogs; Manitoba 202 retrieves the boreal cluster; fusion beats persistence on all targets (−7.5%/−8.3%/−6.1% RMSE).
+**(d) Uncertainty:** 80% PI coverage 0.65→0.776 post-conformal (nominal 0.80).
+**(e) Counterfactuals:** 46,224 futures; wind +20% raises 24-h PyroCb probability (0.019→0.022; ΔPII +0.017); drying RH −30% and compound extremes suppress PyroCb odds while worsening fire-ground severity; ignition relocation to high-relief terrain *raises* intense-fire probability (0→0.037) and *lowers* injection odds — a decision-critical trade invisible to forecasting-only systems.
+**(f) Economy:** full cohort pipeline ≈3.5 min CPU; futures engine 46k predictions/118 s.
+
+## V. DISCUSSION
+Three stress-tested weaknesses: cohort scale (claims cohort-scoped; scaling path E1/E2), GOES unit heterogeneity (audit-gated), and initial kernel instability (fixed by spectral clipping — the EnKF's house stands on it). The framework's wager is that twins earn their name through loops — synchronization, reminiscence, imagination, self-audit — not through a larger network. The cohort behaved accordingly.
+
+## VI. CONCLUSION
+MORPHEUS supplies definition, mathematics, machine, and measured evidence for mnemotic counterfactual wildfire twins, with a reproducible reference implementation and an honest ledger of remaining gaps (10-event cohort, single-pixel anchors, absent fuel/smoke fields). Immediate agenda: multi-event scaling, graph-spatial twin state, fuel-moisture latent, N-ODE kernel upgrades, and a community LOEO benchmark on this exact proto-dataset.
+
+*Artifacts: thesis, 60 figures, 33 tables, trained models, futures CSVs, metrics JSON, and pipeline p01–p06 accompany this paper.*

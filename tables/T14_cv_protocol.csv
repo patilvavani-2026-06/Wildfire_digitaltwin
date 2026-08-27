@@ -1,0 +1,8 @@
+aspect,specification
+scheme,"leave-one-event-out (LOEO), 10 folds"
+rationale,events are the independent sampling units; random row splits leak autocorrelation
+train/test size,~205 / ~22 rows per fold
+imputation,train-fold median (no leakage)
+scaling,fitted on train fold only (ODE/EnKF paths)
+seeds,XGB random_state swept 0..2 for futures ensembles
+reporting,pooled RMSE/MAE/R2 + per-event tables; nested LOEO for fusion α

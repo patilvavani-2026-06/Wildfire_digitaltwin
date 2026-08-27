@@ -1,0 +1,8 @@
+file,rows,columns,events,time_range,missing_cols,role
+pyrocb_GOES_processed.csv,227,10,10,2021-05-27 06:00:00..2022-06-14 20:00:00,5,GOES ABI derived features
+era5_results (1).csv,227,20,10,2021-05-27 06:00:00..2022-06-14 20:00:00,1,ERA5 single-levels
+merged_pyrocb_era5_features[1].csv,225,35,10,2021-05-27 06:00:00..2022-06-14 20:00:00,8,GOES ABI derived features
+complete_era5_veg.csv,227,34,10,2021-05-27 06:00:00..2022-06-14 20:00:00,26,+vegetation
+merged_with_terrain.csv,227,34,10,2021-05-27 06:00:00..2022-06-14 20:00:00,26,+terrain
+merged_with_terrain_dataset.csv,227,40,10,2021-05-27 06:00:00..2022-06-14 20:00:00,26,+terrain
+merged_with_pressure_final.csv,227,45,10,2021-05-27 06:00:00..2022-06-14 20:00:00,31,+terrain (+pressure levels)

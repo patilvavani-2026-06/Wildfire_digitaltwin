@@ -1,0 +1,8 @@
+variable,definition,physical role in twin,units
+t07 (raw_fire_bt),"ABI band 7, 3.9 µm shortwave IR BT",sub-pixel fire hotspot radiance; saturates low (335 K),K (digitized/scaled in file)
+t14 (raw_cloud_bt),"ABI band 14, 11.2 µm longwave window BT",cloud-top temperature; cold overshooting tops → low values,K (normalized in file)
+t16,"ABI band 16, 13.3 µm CO2 absorption BT",warmer than t14 for high clouds (CO2 slicing),K
+fire_proxy,t07 − t14,canonical fire-detection contrast (Matson–Dozier heritage),K
+cloud_height_proxy,t14 − t16,positive for high cold clouds → plume verticality proxy,K
+simulated_green,0.45·b01+0.10·b02+0.45·b03,pseudo-green channel for smoke/haze texture,reflectance (scaled)
+dist_km,pixel↔grid offset,geolocation distance between fire pixel and ERA5/veg grid point,km

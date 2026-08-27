@@ -1,0 +1,8 @@
+variable,definition,physical role in twin,units
+cvh/cvl,high/low vegetation cover fraction,canopy vs grass fuel structure,0–1
+tvh/tvl,high/low vegetation type codes,fuel-model class (ERA5 lookup),code
+elevation,dem mean elevation,plume-rise backround; pressure normalization,m
+slope,terrain slope,fire acceleration (upslope),°
+aspect_sin/cos,aspect components,aspect-aware wind alignment,—
+tpi,topographic position index,ridge(+)/valley(−) exposure,—
+tri,terrain ruggedness index,roughness class,—

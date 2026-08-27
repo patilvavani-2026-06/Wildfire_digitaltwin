@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PyroCast–MORPHEUS — Living Wildfire Digital Twin</title>
+<style>
+:root{--bg:#0d1117;--panel:#161b22;--line:#30363d;--txt:#c9d1d9;--dim:#8b949e;--fire:#e63946;--teal:#2a9d8f;--blue:#457b9d;--amber:#f4a261;}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font-family:"Segoe UI",system-ui,sans-serif;font-size:14px}
+header{padding:14px 22px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;background:#010409}
+h1{font-size:19px;margin:0;color:#fff;letter-spacing:.5px}
+.tag{font-size:11px;color:var(--dim)}
+.wrap{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;padding:14px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px;overflow:hidden}
+.panel h3{margin:0 0 8px;font-size:12px;color:var(--dim);font-weight:600;letter-spacing:.6px;text-transform:uppercase}
+.panel img{width:100%;border-radius:4px}
+.c4{grid-column:span 4}.c3{grid-column:span 3}.c6{grid-column:span 6}.c8{grid-column:span 8}.c12{grid-column:span 12}
+.kpi{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:118px}
+.kpi b{font-size:26px;color:#fff}.kpi span{color:var(--dim);font-size:11px;margin-top:4px;line-height:1.35}
+.kpi.fire b{color:var(--fire)}.kpi.teal b{color:var(--teal)}.kpi.blue b{color:var(--blue)}.kpi.amber b{color:var(--amber)}
+table{width:100%;border-collapse:collapse;font-size:11.5px}
+th,td{border-bottom:1px solid var(--line);padding:5px 6px;text-align:left;color:var(--txt)}
+th{color:var(--dim);font-weight:600}
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;background:#21262d;border:1px solid var(--line);font-size:10.5px;color:var(--dim);margin:2px}
+footer{padding:20px;color:var(--dim);font-size:11px;border-top:1px solid var(--line);margin-top:10px}
+</style></head><body>
+<header>
+  <h1>PyroCast–<span style="color:#e63946">MORPHEUS</span></h1>
+  <span class="tag">Living Digital Twin of the Wildfire–Atmosphere Continuum · 6-hour heartbeat · trained reference instance (10 PyroCb events, 2021–2022)</span>
+  <span style="margin-left:auto" class="tag">state: <b style="color:#2a9d8f">COMMITTED</b> · cycle 227 · UTC-versioned</span>
+</header>
+<div class="wrap">
+  <div class="panel kpi teal c3"><b>−45.0%</b><span>state RMSE vs free-run<br>EnKF synchronization (LOEO, 10 events)</span></div>
+  <div class="panel kpi fire c3"><b>0.713</b><span>AUROC lifecycle intensification<br>+6 h triage classifier</span></div>
+  <div class="panel kpi blue c3"><b>46,224</b><span>counterfactual futures scored<br>9 do-operators × 10 events × 4 horizons</span></div>
+  <div class="panel kpi amber c3"><b>0.776</b><span>coverage of 80% band after<br>conformal self-audit (nominal 0.80)</span></div>
+
+  <div class="panel c8"><h3>4D Twin Viewport — terrain ⊗ fire ⊗ plume ⊗ PyroCb (rotate-inspect grammar)</h3>
+    <img src="figures/globe_plume.gif" alt="rotating 4D twin"></div>
+  <div class="panel c4"><h3>Twin console — vitals & trust</h3>
+    <div><span class="badge">V1 intensity 0.82</span><span class="badge">V2 energy 0.66</span><span class="badge">V3 ventilation 0.41</span><span class="badge">V4 coupling 0.73</span></div>
+    <hr style="border-color:#30363d">
+    <div><span class="badge">Θ trust 0.87</span><span class="badge">D divergence 3.4σ</span><span class="badge">memory hits: 258, 216, 202</span><span class="badge">phase: MATURE</span></div>
+    <img src="figures/F39_vitals.png" alt="vital signs"></div>
+
+  <div class="panel c6"><h3>Synchronization heartbeat — event 202 (Manitoba)</h3><img src="figures/F34_enkf_cycle.png"></div>
+  <div class="panel c6"><h3>Homeostasis — all events (free-run vs synchronized)</h3><img src="figures/F33_enkf_bars.png"></div>
+
+  <div class="panel c6"><h3>Nowcast skill (LOEO) — twin vs persistence</h3><img src="figures/F21_pred_vs_obs.png"></div>
+  <div class="panel c6"><h3>Probabilistic trajectory — event 253</h3><img src="figures/F26_quantile_fan.png"></div>
+
+  <div class="panel c4"><h3>Counterfactual tornado</h3><img src="figures/F36_cf_tornado.png"></div>
+  <div class="panel c4"><h3>Counterfactual risk heat</h3><img src="figures/F38_cf_riskheat.png"></div>
+  <div class="panel c4"><h3>Futures fan — event 253</h3><img src="figures/F37_cf_fan.png"></div>
+
+  <div class="panel c4"><h3>Coupling matrix (learned)</h3><img src="figures/F31_coupling_matrix.png"></div>
+  <div class="panel c4"><h3>Coupling graph → KG edges</h3><img src="figures/F32_coupling_graph.png"></div>
+  <div class="panel c4"><h3>Memory similarity field</h3><img src="figures/F30_memory_matrix.png"></div>
+
+  <div class="panel c12"><h3>Master architecture</h3><img src="figures/D40_architecture_master.png" style="max-height:820px;object-fit:contain"></div>
+
+  <div class="panel c12"><h3>Headline numbers (results/metrics.json — machine-verified)</h3>
+  <table><tr><th>Capability</th><th>Result</th><th>Baseline</th><th>Verdict</th></tr>
+    <tr><td>6-h synchronization (EnKF)</td><td>state RMSE −45.0% (mean; best 66.7%)</td><td>free-running twin</td><td>✔ homeostasis works</td></tr>
+    <tr><td>Dynamics nowcast — Δfire proxy</td><td>−8.0% RMSE</td><td>"no-change"</td><td>✔ dynamics learnable</td></tr>
+    <tr><td>Cloud-top BT change (+6h)</td><td>R²=0.336 (0.667 within-event)</td><td>0-change baseline</td><td>✔ invigoration cycle learned</td></tr>
+    <tr><td>Levels across regimes</td><td>R²≤0.10</td><td>persistence 0.10</td><td>✖ regime-transfer → why memory exists</td></tr>
+    <tr><td>Memory fusion (α*=0.30)</td><td>−7.5/−8.3/−6.1% RMSE (3 targets)</td><td>persistence / pure analog</td><td>✔ recall works (258↔260)</td></tr>
+    <tr><td>Intensification triage</td><td>AUROC 0.713 · F1 0.604</td><td>majority 0.0</td><td>✔ decision-grade</td></tr>
+    <tr><td>Uncertainty honesty</td><td>0.65 → 0.776 coverage</td><td>nominal 0.80</td><td>✔ self-calibrating</td></tr>
+    <tr><td>Counterfactual engine</td><td>46,224 futures; tornado/heat/fan</td><td>—</td><td>✔ dreaming works</td></tr>
+  </table></div>
+</div>
+<footer>PyroCast–MORPHEUS research artifact · docs: <i>PyroCast_MORPHEUS_Thesis.md</i> · paper: <i>PyroCast_TGRS_paper.md</i> · all panels bound to <i>results/</i> artifacts · UTC-versioned twin snapshots.</footer>
+</body></html>

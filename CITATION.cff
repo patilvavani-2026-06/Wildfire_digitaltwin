@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software or the PyroCast–MORPHEUS framework, please cite it as below."
+title: "PyroCast–MORPHEUS: A Mnemotic Counterfactual Digital Twin for Wildfire Pyrocumulonimbus"
+authors:
+  - family-names: "Chopra"
+    given-names: "Angad Singh"
+type: software
+date-released: 2026-08-26
+license: MIT
+repository-code: "https://github.com/Wow6equj567/pyrocast-morpheus"
+keywords:
+  - digital twin
+  - wildfire
+  - pyrocumulonimbus
+  - GOES ABI
+  - ERA5
+  - ensemble Kalman filter
+  - counterfactual inference
+abstract: "A living digital-twin framework for wildfire PyroCb events with episodic memory, ensemble-Kalman synchronization, conformal self-audit, and a counterfactual futures engine — trained on a 10-event GOES/ERA5 cohort."

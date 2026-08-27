@@ -1,0 +1,24 @@
+# PART VII — TASK 13: Twenty Novel Scientific Contributions
+
+*Each is a claim about knowledge, not a software feature; status tags: **[validated]** (evidenced on the reference cohort), **[formalized]** (designed and math-ready), **[program]** (research program).*
+
+1. **Mnemotic Counterfactual Twin (MCT) class definition** — first formalization of a digital-twin species in which episodic memory and interventional futures are *state-carrying* sub-systems rather than services. [formalized+partially validated]
+2. **Memory-and-uncertainty as state** — the state-vector ontology x=[xᶠ xᵖ xᵃ xˡ | xᵐ | xᵘ] that makes remembering and self-doubt legally part of twin state space. [formalized]
+3. **Twin homeostasis with divergence pressure D(t)** — an innovation-Mahalanobis control variable driving assimilation appetite, alarms, and autonomous observation tasking. **[validated: D flares 40–49 exactly on the two regime-extreme events 202/253]**
+4. **Trust field Θ(t)** — a scalar, renderable translation of ensemble covariance + calibration audit that governs decision issuance. [validated via issuance gating rule D3 + coverage audit tie-in]
+5. **Episodic memory engine for PyroCb events** — contrastive-key event schemas, early-window-only keys, top-k analog continuation; **first demonstrated memory-augmented nowcasting of PyroCb lifecycles**. [validated: α\*=0.3 fusion beats persistence on 3/3 targets; Alaska 258↔260 mutual retrieval]
+6. **Regime transfer result (negative result as contribution)** — formal evidence that parameter-only learners fail *levels* generalization across fire regimes (pooled R²≤0.10) while succeeding on *dynamics* (BT-change R²=0.336/0.667 within-event), a distinction previous wildfire-ML evaluations obscure by splitting rows, not events. [validated]
+7. **Semantic scarring** — a governed mechanism by which extreme episodes permanently shift regime priors (with human countersign), giving twins a tractable memory of the unprecedented. [formalized; candidate episode 190 identified]
+8. **Counterfactual dreaming engine** — do-operator scenario kernels with physics-consistent recomputation, rolled through the prediction arbiter as *future measures*. [validated: 46,224 scored futures]
+9. **Counterfactual discovery: ventilation-driven injection** — wind +20% *raises* 24-h PyroCb probability (0.019→0.022; ΔPII +0.017) in this cohort, quantifying the contested ventilation hypothesis on real events. [validated, hypothesis-grade]
+10. **Counterfactual discovery: terrain–injection trade** — relocation to high-relief terrain raises fire-intensity probability (0→0.037) yet *lowers* PyroCb odds; first quantitative instance on real-event twins. [validated]
+11. **Vital-signs representation V₁–V₄** — a provable low-dimensional monitor of fire–atmosphere health (intensity, energy, ventilation/moisture, coupling), glyph-rendered for operators. [formalized; rendered F39]
+12. **Learned fire–atmosphere coupling matrix as KG evidence** — a spectrally stabilized VAR kernel whose coefficients populate causal-edge confidence in the knowledge graph — ML-learned graph priors, signed and versioned. [validated: F31/F32]
+13. **Assimilation appetite** — adaptive R/Q scheduling keyed to divergence and coverage audits rather than fixed inflation factors. [formalized; stable EnKF implementation measured: 45.0% mean RMSE reduction]
+14. **EnKF heartbeat for PyroCb twin states** — first demonstration that 6-hourly ensemble assimilation bounds a fire–atmosphere twin's error growth bimodally (analysis collapse ~1.7–66.7% per event). [validated]
+15. **Conformal self-audit loop** — event-split conformal repair *inside* a living twin (not post-hoc): coverage 0.65→0.776 nominal-80%. [validated]
+16. **Twin fitness functional J** — an explicit selection criterion (skill − miscalibration − staleness − forgetting) that makes "living" falsifiable rather than metaphorical. [formalized]
+17. **Counterfactual comparison grammar for decision UIs** — split-world + delta-card visualization grammar with synchronized time systems (D55), closing the Futures-UX gap in wildfire ops. [formalized; mocked]
+18. **PyroCb cohort digital-twin dataset release** — harmonized 227×82 6-hourly twin-state table (GOES⊗ERA5⊗PL⊗terrain⊗veg) with unit-audit ledger and event identifications. [validated: data/master.csv]
+19. **Physics-resident/ML-residual division of labor** — spectral-radius-clipped kernel carrying the mean dynamics with GBM/N-ODE residual on top, demonstrably controlling instability that pure learners exhibit. [validated: unclipped kernel unstable; clipped EnKF stable]
+20. **A reproducible sandbox-scale living twin** — end-to-end trained reference implementation (p01–p06) with open metrics, ensembles, and futures CSVs, establishing a baseline the community can beat. [validated]

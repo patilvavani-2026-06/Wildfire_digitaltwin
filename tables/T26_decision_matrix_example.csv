@@ -1,0 +1,10 @@
+scenario,E[fire proxy +24h],E[PII +24h],σ(PII),P(PyroCb|ω)
+S7 compound extreme,-78.133,0.167,0.075,0.0
+S1 wind +20%,-79.961,0.073,0.067,0.0
+S8 pyro-feedback ON,-80.068,0.039,0.057,0.0
+S3 drying RH -30%,-79.374,0.064,0.053,0.0
+S0 baseline,-80.13,0.036,0.054,0.0
+S4 rain-out,-80.482,0.042,0.051,0.0
+S2 heatwave +5K,-79.597,0.051,0.054,0.0
+S6 relocate: high-relief,-102.933,-0.277,0.031,0.0
+S5 deep drought,-80.447,0.026,0.049,0.0
