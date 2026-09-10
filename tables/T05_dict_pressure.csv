@@ -1,0 +1,7 @@
+variable,definition,physical role in twin,units
+rh_850/rh_750/rh_650,relative humidity at pressure levels,"column moisture structure, entrainment fuel for downdrafts",%
+u_250/v_250,250 hPa wind components,steering + anvil-level shear; plume tilt,m s$^{-1}$
+cin_filled,CIN with structural NaN filled,used in buoyancy forcing,J kg$^{-1}$
+injection_potential,published derived index (GOES+ERA5),smoke injection propensity,—
+PII,PyroCb Injection Index,event-level PyroCb intensity rank,—
+capped_flag,CIN masking flag,structural missingness indicator,bool

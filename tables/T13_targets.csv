@@ -1,0 +1,8 @@
+target,type,meaning,evaluation family
+y_fire_proxy_p1,regression,fire proxy at t+6h (hotspot contrast),levels
+y_chp_p1,regression,cloud-height proxy at t+6h (plume verticality),levels
+y_cbt_chg_p1,regression,change in cloud-top BT over next 6h (invigoration),dynamics
+y_pii_p1,regression,PyroCb Injection Index at t+6h,levels
+y_intensify_p1,classification,1 if cloud-height proxy increases next cycle,lifecycle
+Δ-targets,regression,"change of fire proxy / PII vs ""no-change"" baseline",dynamics
+yf/yp_p1..p4,regression,fire proxy & PII at +6..+24 h (futures engine),multi-horizon

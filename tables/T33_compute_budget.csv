@@ -1,0 +1,8 @@
+stage,wall time (sandbox)
+profiling + master build,< 2 s
+EDA figures (21),≈ 21 s
+"core LOEO training (all targets, ablations, quantiles, classifier)",≈ 32 s
+memory + coupling + EnKF engines,≈ 6 s
+"counterfactual futures (46,224 predictions)",≈ 118 s
+diagram + viz mockups incl GIF,≈ 30 s
+total end-to-end,≈ 3.5 min on 1 CPU (no GPU)

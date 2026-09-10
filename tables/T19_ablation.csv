@@ -1,0 +1,13 @@
+config,target,RMSE,R2
+GOES only,fire_proxy (+6h),16.7686,0.0837
+GOES only,PII (+6h),0.3643,0.2556
+GOES+ERA5,fire_proxy (+6h),17.6404,-0.0141
+GOES+ERA5,PII (+6h),0.3793,0.1932
+GOES+ERA5+PRESS,fire_proxy (+6h),17.2837,0.0265
+GOES+ERA5+PRESS,PII (+6h),0.3793,0.1931
++derived physics,fire_proxy (+6h),16.3918,0.1244
++derived physics,PII (+6h),0.383,0.1772
+FULL (twin state),fire_proxy (+6h),17.0889,0.0483
+FULL (twin state),PII (+6h),0.3796,0.1917
+FULL + geography,fire_proxy (+6h),15.5867,0.2083
+FULL + geography,PII (+6h),0.3352,0.3698

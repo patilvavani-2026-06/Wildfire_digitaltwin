@@ -1,0 +1,10 @@
+parameter,value
+cycle period,6 h (00/06/12/18 UTC)
+propagator,"VAR(1) kernel A (ridge, ρ<0.97)"
+process noise Q,train residual covariance
+observed dims,"GOES proxies (r=0.15 σ) + BLH, CAPE (r=0.08 σ)"
+ensemble N,80
+update,stochastic EnKF (perturbed obs)
+divergence D,innovation Mahalanobis; alarm at D>3·E[D]
+trust Θ,Θ=1/(1+D/E[D]) modulated by coverage audit
+failsafe,"if D>threshold for 2 cycles → widen Q ×2, task extra look"

@@ -1,0 +1,12 @@
+variable,definition,physical role in twin,units
+t2m,2 m temperature,"surface heating, comfort→convection driver",K
+sp,surface pressure,elevation proxy / mass field,Pa
+"u10,v10",10 m wind components,"fire spread vector, ember transport",m s$^{-1}$
+z,geopotential,orography (m$^2$ s$^{-2}$),m$^2$ s$^{-2}$
+blh,boundary-layer height,mixing volume for smoke; diurnal pump,m
+cape,convective available potential energy,updraft energy for PyroCb,J kg$^{-1}$
+cin,convective inhibition,cap strength; NaN when no parcel buoyancy,J kg$^{-1}$
+tp,total precipitation,rain-out / wetting of fuels,m (6-h accum)
+slhf,surface latent heat flux (ECMWF sign: down +),moisture supply; negative = upward,J m$^{-2}$/6h
+sshf,surface sensible heat flux,direct heating of PBL; negative = upward,J m$^{-2}$/6h
+fg10,10 m wind gust (max since pp),extreme spread/gust front proxy,m s$^{-1}$

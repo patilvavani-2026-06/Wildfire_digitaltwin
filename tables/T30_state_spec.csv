@@ -1,0 +1,7 @@
+block,variables,dim,source
+xᶠ fire,"[fire_proxy, raw_fire_bt, dist_km, Δfire_proxy]",4,GOES B07/B14
+xᵖ plume,"[cloud_height_proxy, raw_cloud_bt, Δraw_cloud_bt, phase∈{0,1,2}]",4,GOES B14/B16
+xᵃ atmosphere,"[t2m,sp,u10,v10,blh,cape,cin,tp,slhf,sshf,fg10,RH850/750/650,u250,v250]",16,ERA5
+xˡ land,"[elevation,slope,aspect(sin,cos),tpi,tri,cvh,cvl,tvh,tvl,dry_spell]",11,DEM/veg/fuel proxy
+xᵐ memory,"[event embedding z∈R⁸ (PCA), retrieval weights a₁..₃]",11,episodic store
+xᵘ uncertainty,"[diag P (8), Θ trust, D divergence]",10,EnKF + calibration

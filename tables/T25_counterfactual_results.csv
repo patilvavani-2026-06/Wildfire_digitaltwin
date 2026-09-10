@@ -1,0 +1,9 @@
+scenario,dFireProxy_24h,dPII_24h,P_fire_intense_S0,P_fire_intense_SC,P_PyroCb_S0,P_PyroCb_SC
+S1 wind +20%,0.14,0.0169,0.0,0.0,0.019,0.022
+S2 heatwave +5K,-0.52,-0.0245,0.0,0.0,0.019,0.008
+S3 drying RH -30%,-0.49,-0.0251,0.0,0.0,0.019,0.008
+S4 rain-out,0.1,0.0048,0.0,0.0,0.019,0.017
+S5 deep drought,-0.35,-0.0132,0.0,0.0,0.019,0.014
+S6 relocate: high-relief,-2.91,-0.0639,0.0,0.037,0.019,0.008
+S7 compound extreme,-1.09,-0.0413,0.0,0.0,0.019,0.004
+S8 pyro-feedback ON,0.01,0.0005,0.0,0.0,0.019,0.019
